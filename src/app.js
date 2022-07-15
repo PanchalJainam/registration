@@ -4,11 +4,11 @@ const path=require('path');
 const hbs = require('hbs')
 const PORT=process.env.PORT || 3000;
 
-require('../db/conn')
-const Register=require('./register')
-const publicPath = path.join(__dirname, '../../public')
-const templatePath = path.join(__dirname, '../../templates/views');
-const partialPath = path.join(__dirname, '../../templates/partials');
+require('./db/conn')
+const Register=require('./models/register')
+const publicPath = path.join(__dirname, '../public')
+const templatePath = path.join(__dirname, '../templates/views');
+const partialPath = path.join(__dirname, '../templates/partials');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
